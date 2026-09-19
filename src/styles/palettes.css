@@ -17,47 +17,47 @@
 /* 1a. Huerta Viva - Modo Claro */
 :root,
 [data-palette="blanco-verde"] {
-  --color-primary: #1e7033;         /* Verde huerta vigoroso */
-  --color-primary-strong: #124d22;  /* Verde bosque profundo */
-  --color-primary-soft: #eaf6ec;    /* Rocío vegetal suave */
+  --color-primary: #15803d;         /* Verde huerta vigoroso */
+  --color-primary-strong: #0d5c2b;  /* Verde bosque profundo */
+  --color-primary-soft: #dcfce7;    /* Rocío vegetal suave */
   --color-accent: #ea580c;          /* Naranja tomate/albaricoque maduro */
   --color-accent-soft: #fff3e8;     /* Fondo albaricoque */
   --color-accent-contrast: #ffffff;
-  --color-sun: #ca8a04;             /* Amarillo sol de campo */
+  --color-sun: #f5b400;             /* Amarillo sol de campo */
   --color-sun-soft: #fef9c3;        /* Resplandor suave de sol */
   
   /* Fondos estilo Kinder Ground: cálidos, terrosos y orgánicos */
-  --color-bg: #fcf8f2;              /* Lienzo cálido lino / harina de trigo */
+  --color-bg: #fffaf0;              /* Lienzo cálido lino / harina de trigo */
   --color-surface: #ffffff;         /* Tarjetas flotantes limpias */
-  --color-surface-alt: #f3ede2;     /* Bloque arena tostada cálida */
-  --color-surface-tint: #e4efe2;    /* Bloque verde huerto suave */
+  --color-surface-alt: #ffefd2;     /* Bloque arena tostada cálida */
+  --color-surface-tint: #d3f5dc;    /* Bloque verde huerto suave */
   --color-surface-hover: #faebd8;
-  --color-border: #decfae;          /* Borde arcilloso sutil */
+  --color-border: #f0d9a8;          /* Borde arcilloso sutil */
   --color-on-primary: #ffffff;
-  --color-glow: rgba(30, 112, 51, 0.18);
+  --color-glow: rgba(21, 128, 61, 0.2);
   --color-accent-glow: rgba(234, 88, 12, 0.28);
 }
 
 /* 1b. Huerta Viva - Modo Oscuro */
 [data-theme="dark"],
 [data-palette="blanco-verde"][data-theme="dark"] {
-  --color-primary: #4ade80;         /* Verde brote esmeralda luminoso */
-  --color-primary-strong: #86efac;  /* Verde menta claro */
-  --color-primary-soft: #062b16;    /* Fondo vegetal nocturno */
-  --color-accent: #fb923c;          /* Ámbar / naranja luminoso */
+  --color-primary: #34d399;         /* Verde brote esmeralda luminoso */
+  --color-primary-strong: #6ee7b7;  /* Verde menta claro */
+  --color-primary-soft: #06281c;    /* Fondo vegetal nocturno */
+  --color-accent: #ffa94d;          /* Ámbar / naranja luminoso */
   --color-accent-soft: #2e1507;
   --color-accent-contrast: #150600;
-  --color-sun: #facc15;
+  --color-sun: #fbbf24;
   --color-sun-soft: #2b2306;
-  --color-bg: #121914;              /* Tierra fértil nocturna con calidez */
-  --color-surface: #1a241e;
-  --color-surface-alt: #223027;     /* Bloque nocturno contrastado */
-  --color-surface-tint: #163821;    /* Tinte verde nocturno */
-  --color-surface-hover: #293a2f;
-  --color-border: #2e4736;
-  --color-on-primary: #04180a;
-  --color-glow: rgba(74, 222, 128, 0.22);
-  --color-accent-glow: rgba(251, 146, 60, 0.32);
+  --color-bg: #0a1210;              /* Tierra fértil nocturna con calidez */
+  --color-surface: #121e1a;
+  --color-surface-alt: #1a2c26;     /* Bloque nocturno contrastado */
+  --color-surface-tint: #0f3a2a;    /* Tinte verde nocturno */
+  --color-surface-hover: #223a32;
+  --color-border: #2a4a3f;
+  --color-on-primary: #03150e;
+  --color-glow: rgba(52, 211, 153, 0.22);
+  --color-accent-glow: rgba(255, 169, 77, 0.32);
 }
 
 /* ==========================================================================
