@@ -24,7 +24,7 @@ jobs:
 
       - name: Build
         env:
-          VITE_BASE_PATH: /
+          VITE_BASE_PATH: /xarxa-alimenta/
         run: npm run build
       - name: Add 404 fallback for client-side routing
         run: cp dist/index.html dist/404.html
