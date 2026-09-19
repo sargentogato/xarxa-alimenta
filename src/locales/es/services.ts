@@ -1,0 +1,70 @@
+export default {
+  title: 'Servicios comunitarios',
+  intro: 'En {orgName} ofrecemos alternativas reales de alimentación consciente, cultivo regenerativo y apoyo social colectivo.',
+  quickNav: 'Ir directamente a:',
+  viewAgenda: 'Ver próxima agenda',
+  contactSectionTitle: '¿Quieres sumarte o necesitas más información?',
+  contactSectionText: 'Escríbenos o ven a visitarnos en las jornadas de puertas abiertas.',
+  items: {
+    reparto: {
+      title: 'Reparto de alimentos agroecológicos',
+      summary: 'Distribución solidaria de cestas de hortalizas y fruta fresca de temporada.',
+      description: 'Coordinamos la recogida y distribución periódica de productos frescos procedentes de proyectos agroecológicos y huertos comunitarios locales.',
+      includes: [
+        'Cestas semanales de hortalizas y frutas locales',
+        'Canal directo sin intermediarios abusivos',
+        'Precios justos para personas productoras y consumidoras',
+        'Apoyo alimentario a familias del barrio',
+      ],
+      audience: 'Vecinas, familias interesadas en consumo responsable y personas con necesidad de apoyo alimentario.',
+    },
+    huertos: {
+      title: 'Huertos comunitarios',
+      summary: 'Bancales compartidos de cultivo biológico para aprender y cosechar en equipo.',
+      description: 'Espacios de cultivo urbano donde poner las manos en la tierra, compartir conocimientos tradicionales de labranza y producir alimentos libres de pesticidas.',
+      includes: [
+        'Uso de bancales y zonas comunitarias de cultivo',
+        'Herramientas comunes y sistema de riego compartido',
+        'Semillero colectivo y banco de semillas autóctonas',
+        'Acompañamiento en el aprendizaje agroecológico',
+      ],
+      audience: 'Cualquier persona con ganas de cultivar, convivir y aprender, sin necesidad de experiencia previa.',
+    },
+    talleres: {
+      title: 'Talleres y formación',
+      summary: 'Sesiones prácticas sobre compostaje, poda, cocina estacional y soberanía alimentaria.',
+      description: 'Organizamos periódicamente talleres formativos participativos impartidos por personas voluntarias y especialistas colaboradoras.',
+      includes: [
+        'Compostaje casero y comunitario',
+        'Conservación y multiplicación de semillas locales',
+        'Cocina de aprovechamiento y conservas tradicionales',
+        'Manejo de plagas sin químicos sintéticos',
+      ],
+      audience: 'Personas de todas las edades, colegios, asociaciones y colectivos del territorio.',
+    },
+    eventos: {
+      title: 'Eventos y encuentros comunitarios',
+      summary: 'Jornadas de puertas abiertas, comidas populares y celebraciones de temporada.',
+      description: 'La huerta es también un espacio de encuentro, disfrute y fiesta vecinal. Celebramos los cambios de estación con música, cultura y comida compartida.',
+      includes: [
+        'Jornadas de puertas abiertas periódicas',
+        'Comidas comunitarias y paellas agroecológicas',
+        'Encuentros culturales, recitales y música acústica',
+        'Asambleas abiertas de participación',
+      ],
+      audience: 'Abierto a todo el público, familias, infancia y vecindario.',
+    },
+    voluntariado: {
+      title: 'Voluntariado y apoyo mutuo',
+      summary: 'Súmate a los turnos de riego, bioconstrucción y tareas del jardín forestal.',
+      description: 'El corazón de {orgName} son las personas que aportan su tiempo y energía. Cada par de manos hace posible sostener los huertos y repartos.',
+      includes: [
+        'Turnos flexibles de cuidado y riego',
+        'Bioconstrucción con materiales sostenibles',
+        'Apoyo logístico en eventos y comunicación',
+        'Comunidad acogedora e intergeneracional',
+      ],
+      audience: 'Personas voluntarias con compromiso, curiosidad y ganas de transformar su entorno local.',
+    },
+  },
+};

@@ -1,0 +1,75 @@
+/**
+ * theme.css: Variables estructurales, de espaciado, forma y colores neutros.
+ * No dependen de la paleta activa.
+ */
+
+:root {
+  /* Tipografía */
+  --font-body: 'Nunito Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Fraunces Variable', Georgia, serif;
+  --line-height: 1.6;
+  --letter-spacing: 0;
+  --word-spacing: 0;
+
+  /* Radios de borde (en rem) */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.875rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999rem;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.09), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+
+  /* Espaciado sistemático en rem */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.5rem;   /* 24px */
+  --space-6: 2rem;     /* 32px */
+  --space-7: 3rem;     /* 48px */
+  --space-8: 4rem;     /* 64px */
+
+  /* Dimensiones generales */
+  --header-height: 4.5rem;
+  --content-width: 75rem; /* 1200px */
+
+  /* Anillo de foco accesible */
+  --color-focus: #c2410c;
+  --focus-ring-width: 3px;
+  --focus-ring-offset: 2px;
+
+  /* Transiciones */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* Neutros por defecto (modo claro) */
+  --color-text: #1a201c;
+  --color-text-muted: #4a594e;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f3f6f3;
+  --color-scrim: rgba(10, 20, 14, 0.6);
+
+  color-scheme: light;
+}
+
+/* Modo oscuro para neutros */
+[data-theme="dark"] {
+  --color-text: #f3f7f4;
+  --color-text-muted: #a6b8ab;
+  --color-surface: #142117;
+  --color-surface-hover: #1c2e21;
+  --color-scrim: rgba(0, 0, 0, 0.75);
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.35), 0 2px 4px -2px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.25);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+
+  color-scheme: dark;
+}

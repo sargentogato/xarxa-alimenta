@@ -1,0 +1,70 @@
+export default {
+  title: 'Community services',
+  intro: 'At {orgName} we offer real pathways for mindful eating, regenerative growing, and collective mutual support.',
+  quickNav: 'Quick navigation:',
+  viewAgenda: 'View upcoming agenda',
+  contactSectionTitle: 'Want to join or need more information?',
+  contactSectionText: 'Drop us a line or come visit us during our open community days.',
+  items: {
+    reparto: {
+      title: 'Agroecological food distribution',
+      summary: 'Solidarity distribution of fresh seasonal vegetable and fruit boxes.',
+      description: 'We coordinate the regular collection and distribution of fresh produce sourced from local agroecological growers and community plots.',
+      includes: [
+        'Weekly boxes of fresh local fruits and vegetables',
+        'Direct connection without unfair middlemen',
+        'Fair prices for both producers and consumers',
+        'Food assistance solidarity for families in need',
+      ],
+      audience: 'Neighbors, families seeking conscious consumption, and individuals in need of food solidarity.',
+    },
+    huertos: {
+      title: 'Community gardens',
+      summary: 'Shared organic cultivation beds to learn and harvest as a team.',
+      description: 'Urban growing spaces to get our hands in the earth, share traditional soil wisdom, and cultivate food free from synthetic pesticides.',
+      includes: [
+        'Access to community beds and growing areas',
+        'Shared tools and community irrigation setup',
+        'Collective seedling nursery and native seed bank',
+        'Mentorship and agroecological learning',
+      ],
+      audience: 'Anyone excited to grow, connect, and learn—no previous gardening experience required.',
+    },
+    talleres: {
+      title: 'Workshops & practical training',
+      summary: 'Hands-on sessions on composting, pruning, seasonal cooking, and food sovereignty.',
+      description: 'We organize regular participatory workshops led by experienced volunteers and guest agroecological practitioners.',
+      includes: [
+        'Home and community composting methods',
+        'Conservation and propagation of native seeds',
+        'Zero-waste cooking and traditional preserves',
+        'Ecological pest management without chemicals',
+      ],
+      audience: 'People of all ages, local schools, neighborhood groups, and collective initiatives.',
+    },
+    eventos: {
+      title: 'Events & community gatherings',
+      summary: 'Open days, community lunches, and seasonal celebrations.',
+      description: 'The garden is also a space for joy, celebration, and neighborhood culture. We mark the turning of seasons with music, food, and companionship.',
+      includes: [
+        'Regular weekend open community days',
+        'Shared community meals and seasonal paellas',
+        'Cultural gatherings, poetry, and acoustic music',
+        'Open participatory community assemblies',
+      ],
+      audience: 'Open to the general public, families, children, and neighborhood friends.',
+    },
+    voluntariado: {
+      title: 'Volunteering & mutual aid',
+      summary: 'Join watering shifts, bio-construction projects, and forest garden care.',
+      description: 'The heart of {orgName} is the people who offer their time, care, and hands. Every effort helps keep the plots fertile and the distributions alive.',
+      includes: [
+        'Flexible garden care and watering shifts',
+        'Eco-construction with natural and reclaimed materials',
+        'Logistical support during events and communications',
+        'Welcoming, multigenerational community atmosphere',
+      ],
+      audience: 'Volunteers with curiosity, care, and a desire to nurture their local neighborhood ecosystem.',
+    },
+  },
+};

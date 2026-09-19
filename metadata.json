@@ -1,0 +1,6 @@
+{
+  "name": "Xarxa Alimenta",
+  "description": "Web de Xarxa Alimenta - Red comunitaria de huertos, alimentación y actividades",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

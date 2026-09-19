@@ -1,0 +1,116 @@
+export default {
+  title: 'Support & Donate',
+  intro: 'Your financial and voluntary contributions sustain our shared farming tools, irrigation water, heirloom seeds, and solidarity fresh food distributions at {orgName}.',
+  
+  calculator: {
+    title: 'Community impact calculator',
+    subtitle: 'See what each contribution makes possible across our community gardens and agroecological projects:',
+    customAmountLabel: 'Or enter another amount (€):',
+    frequencyOneTime: 'One-time support',
+    frequencyMonthly: 'Monthly support',
+    amounts: {
+      5: {
+        label: '€5',
+        title: 'Heirloom seeds & organic seedlings',
+        description: 'Funds traditional heirloom crop seeds and organic seedlings to cultivate a complete community garden bed.',
+        metric: '1 garden bed sown with local biodiversity',
+      },
+      15: {
+        label: '€15',
+        title: 'Efficient irrigation & tool maintenance',
+        description: 'Covers maintenance of drip irrigation lines, filters, valves, and sharpening of shared farming tools.',
+        metric: 'Irrigation maintenance for 1 garden for 1 month',
+      },
+      30: {
+        label: '€30',
+        title: 'Solidarity fresh food basket',
+        description: 'Sustains harvesting and neighborhood delivery of fresh, healthy, chemical-free vegetables for a vulnerable family.',
+        metric: '1 family basket of fresh seasonal produce',
+      },
+      50: {
+        label: '€50',
+        title: 'Educational workshop for neighborhood schools',
+        description: 'Provides learning materials, gardening gloves, organic compost, and hand lenses for school and community soil workshops.',
+        metric: 'Learning materials for 1 workshop of 25 participants',
+      },
+    },
+    customMetric: 'Your contribution of €{amount} directly fosters food sovereignty and mutual neighborhood care across our communities.',
+  },
+
+  methods: {
+    title: 'Direct donation channels',
+    subtitle: 'Choose the most convenient method for you. 100% of all contributions go directly toward sustaining our grassroots projects.',
+    bankTitle: 'Bank transfer (Ethical banking)',
+    bankDesc: 'Ideal for recurring monthly contributions or one-off donations with zero commercial intermediaries.',
+    bankName: 'Bank: Triodos Bank (Ethical Banking)',
+    holderLabel: 'Account holder',
+    ibanLabel: 'IBAN',
+    bicLabel: 'BIC / SWIFT code',
+    conceptLabel: 'Suggested concept',
+    conceptValue: 'Donation Xarxa Alimenta',
+    bizumTitle: 'Solidarity Bizum',
+    bizumDesc: 'Quick and easy directly from your bank app under "Donation" or "Donate to NGO".',
+    bizumCodeLabel: 'Bizum NGO code',
+    bizumCodeValue: '04892',
+    bizumConcept: 'Concept: Donation Xarxa Alimenta',
+    teamingTitle: 'Teaming (€1 / month)',
+    teamingDesc: 'The power of small drops: back our work with just €1 each month with zero platform fees.',
+    teamingBtn: 'Join our Teaming group',
+    copyBtn: 'Copy',
+    copiedText: 'Copied!',
+  },
+
+  transparency: {
+    title: 'Transparency & resource allocation',
+    subtitle: 'As a non-profit association, we manage every euro with collective responsibility and democratic accountability at public assemblies.',
+    items: {
+      food: {
+        percent: '40%',
+        title: 'Solidarity harvest distributions',
+        desc: 'Harvesting, packing, and neighborhood delivery of fresh vegetables to local families in need.',
+      },
+      infrastructure: {
+        percent: '30%',
+        title: 'Water, seeds & soil maintenance',
+        desc: 'Drip irrigation infrastructure, solar water pump maintenance, organic seeds, and compost.',
+      },
+      education: {
+        percent: '20%',
+        title: 'Open educational workshops',
+        desc: 'Free learning sessions for schools, children, home composting, and practical agroecology.',
+      },
+      logistics: {
+        percent: '10%',
+        title: 'Sustainable logistics & tools',
+        desc: 'Maintenance of cargo bicycles and trailers (abike), and shared community hand tools.',
+      },
+    },
+    assemblyNotice: 'Annual financial balance sheets and records are reviewed and approved democratically at our open community assemblies.',
+  },
+
+  otherWays: {
+    title: 'Other ways to help (without money)',
+    subtitle: 'Money is only one of many ways to keep our network flourishing. Your time, skills, and hands are just as valuable:',
+    gardeningTitle: 'Hands in the soil (Volunteering)',
+    gardeningDesc: 'Join scheduled community workdays for seeding, weeding, harvesting, and care in any of our garden spaces.',
+    gardeningCta: 'Explore volunteering',
+    toolsTitle: 'Tool and material donations',
+    toolsDesc: 'Have extra shovels, rakes, hoses, lumber, or seedling trays you no longer use? We give them second life in our gardens.',
+    toolsCta: 'Contact us to donate gear',
+    spreadTitle: 'Spread the word',
+    spreadDesc: 'Share our workshops, volunteer calls, and harvest announcements with your friends and neighbors.',
+    spreadCta: 'Follow us on Instagram',
+  },
+
+  faq: {
+    title: 'Frequently asked questions about donations',
+    q1: 'Is Xarxa Alimenta a non-profit organization?',
+    a1: 'Yes, we are a grassroots non-profit community association. 100% of all received funds are reinvested in keeping the gardens running, buying organic inputs, and solidarity food baskets.',
+    q2: 'Can I set up a recurring monthly contribution?',
+    a2: 'Absolutely! You can set up a scheduled monthly bank transfer directly from your online banking to the association IBAN account.',
+    q3: 'Can I donate seeds or seedlings directly?',
+    a3: 'We love receiving heirloom and organically grown seeds! Get in touch or come visit us during any open-door day to swap seeds.',
+    q4: 'How can I learn about the association finances?',
+    a4: 'We present our full financial balance transparently at our regular open assemblies and in the annual community summary.',
+  },
+};

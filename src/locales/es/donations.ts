@@ -1,0 +1,116 @@
+export default {
+  title: 'Colabora y dona',
+  intro: 'Tus aportaciones económicas y de tiempo sostienen las herramientas compartidas, el agua de riego, las semillas tradicionales y los repartos solidarios de cosechas en {orgName}.',
+  
+  calculator: {
+    title: 'Calculadora de impacto comunitario',
+    subtitle: 'Descubre qué hace posible cada aportación en nuestros huertos y proyectos agroecológicos:',
+    customAmountLabel: 'O introduce otra cantidad (€):',
+    frequencyOneTime: 'Aportación puntual',
+    frequencyMonthly: 'Aportación mensual',
+    amounts: {
+      5: {
+        label: '5 €',
+        title: 'Semillas y planteles locales',
+        description: 'Financia semillas de variedades tradicionales y planteles ecológicos para sembrar un bancal comunitario completo.',
+        metric: '1 bancal sembrado con biodiversidad local',
+      },
+      15: {
+        label: '15 €',
+        title: 'Riego eficiente y herramientas',
+        description: 'Cubre el mantenimiento de tuberías por goteo, filtros, llaves de paso y afilado de aperos agrícolas comunitarios.',
+        metric: 'Mantenimiento de riego para 1 huerto durante 1 mes',
+      },
+      30: {
+        label: '30 €',
+        title: 'Cesta agroecológica solidaria',
+        description: 'Sostiene la cosecha y el reparto vecinal de alimentos frescos, saludables y libres de químicos para una familia vulnerable.',
+        metric: '1 cesta familiar con verduras frescas de temporada',
+      },
+      50: {
+        label: '50 €',
+        title: 'Taller educativo abierto a escuelas',
+        description: 'Proporciona materiales didácticos, guantes, compost y lupas para talleres escolares y comunitarios de microbiología y cultivo.',
+        metric: 'Material didáctico para 1 taller de 25 participantes',
+      },
+    },
+    customMetric: 'Tu aportación de {amount}€ impulsa directamente la soberanía alimentaria y el apoyo mutuo vecinal en nuestros barrios.',
+  },
+
+  methods: {
+    title: 'Canales directos de aportación',
+    subtitle: 'Elige la vía más cómoda para ti. Todas las aportaciones van íntegras al sostenimiento de los proyectos comunitarios.',
+    bankTitle: 'Transferencia bancaria (Banca ética)',
+    bankDesc: 'Ideal para aportaciones periódicas o donaciones puntuales seguras sin intermediarios comerciales.',
+    bankName: 'Entidad: Triodos Bank (Banca Ética)',
+    holderLabel: 'Titular de la cuenta',
+    ibanLabel: 'IBAN',
+    bicLabel: 'Código BIC / SWIFT',
+    conceptLabel: 'Concepto sugerido',
+    conceptValue: 'Donación Xarxa Alimenta',
+    bizumTitle: 'Bizum solidario',
+    bizumDesc: 'Rápido, directo desde la app de tu banco, en el apartado «Hacer donación» o «Donar a ONG».',
+    bizumCodeLabel: 'Código ONG Bizum',
+    bizumCodeValue: '04892',
+    bizumConcept: 'Concepto: Donación Xarxa Alimenta',
+    teamingTitle: 'Teaming (1 € al mes)',
+    teamingDesc: 'La fuerza de muchas pequeñas gotas: apóyanos con solo 1€ al mes sin comisiones.',
+    teamingBtn: 'Unirme a nuestro grupo de Teaming',
+    copyBtn: 'Copiar',
+    copiedText: '¡Copiado!',
+  },
+
+  transparency: {
+    title: 'Transparencia y destino de los fondos',
+    subtitle: 'Como asociación sin ánimo de lucro, gestionamos cada euro con responsabilidad colectiva y rendición de cuentas en asamblea pública.',
+    items: {
+      food: {
+        percent: '40%',
+        title: 'Repartos y cestas solidarias',
+        desc: 'Cosecha, acondicionamiento y distribución de hortalizas frescas a familias del barrio con dificultades.',
+      },
+      infrastructure: {
+        percent: '30%',
+        title: 'Agua, semillas y mantenimiento',
+        desc: 'Sistemas de riego por goteo, reparación de bombas solares, semillas ecológicas y enmiendas orgánicas.',
+      },
+      education: {
+        percent: '20%',
+        title: 'Talleres formativos abiertos',
+        desc: 'Actividades pedagógicas gratuitas para escuelas, infancia, compostaje y agroecología aplicada.',
+      },
+      logistics: {
+        percent: '10%',
+        title: 'Logística sostenible y aperos',
+        desc: 'Mantenimiento de bicicletas y remolques de carga (abike), y herramientas compartidas.',
+      },
+    },
+    assemblyNotice: 'Las cuentas anuales y los libros de actas se revisan y aprueban democráticamente en nuestras asambleas periódicas abiertas a toda la comunidad.',
+  },
+
+  otherWays: {
+    title: 'Otras formas de apoyo mutuo (sin dinero)',
+    subtitle: 'El dinero es solo una de las muchas formas de sostener la red. Tu tiempo, tus saberes y tus manos son igualmente valiosos:',
+    gardeningTitle: 'Manos a la tierra (Voluntariado)',
+    gardeningDesc: 'Súmate a las jornadas de siembra, escarda, cosecha y cuidados en cualquiera de nuestros espacios agrícolas.',
+    gardeningCta: 'Consultar voluntariado',
+    toolsTitle: 'Donación de aperos y materiales',
+    toolsDesc: '¿Tienes palas, rastrillos, mangueras, tablones o semilleros que ya no uses? Les damos una segunda vida en los huertos comunitarios.',
+    toolsCta: 'Contactar para donar material',
+    spreadTitle: 'Difusión y voz comunitaria',
+    spreadDesc: 'Comparte nuestras actividades, talleres y llamadas de apoyo en tus redes y con tus vecinas y vecinos.',
+    spreadCta: 'Seguirnos en Instagram',
+  },
+
+  faq: {
+    title: 'Preguntas frecuentes sobre colaboraciones',
+    q1: '¿Xarxa Alimenta es una entidad sin ánimo de lucro?',
+    a1: 'Sí, somos una asociación comunitaria sin ánimo de lucro. Todos los recursos se reinvierten al 100% en el mantenimiento de los huertos, la compra de insumos agroecológicos y las cestas solidarias.',
+    q2: '¿Puedo colaborar de forma mensual en lugar de puntual?',
+    a2: '¡Por supuesto! Puedes programar una transferencia periódica mensual directamente desde tu banca electrónica al número de cuenta IBAN de la asociación.',
+    q3: '¿Puedo aportar semillas o planteles directamente?',
+    a3: '¡Nos encanta recibir semillas tradicionales y reproducidas de forma ecológica! Escríbenos o acércate a cualquiera de nuestras jornadas de puertas abiertas para intercambiar variedades.',
+    q4: '¿Cómo puedo informarme sobre las cuentas de la asociación?',
+    a4: 'Presentamos el balance económico de forma completamente transparente en nuestras asambleas periódicas y en el informe anual que compartimos con socias, voluntarias y colaboradoras.',
+  },
+};

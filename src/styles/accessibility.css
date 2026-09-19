@@ -1,0 +1,91 @@
+/**
+ * accessibility.css: Reglas activadas por atributos [data-a11y-*] en <html>.
+ * Escalamiento de texto en rem, contraste, tipografía, espaciado, enlaces y movimiento.
+ */
+
+/* 1. Tamaño de texto (100%, 125%, 150%, 175%) */
+html[data-a11y-text="1"] {
+  font-size: 100%; /* 16px base */
+}
+
+html[data-a11y-text="2"] {
+  font-size: 125%; /* 20px base */
+}
+
+html[data-a11y-text="3"] {
+  font-size: 150%; /* 24px base */
+}
+
+html[data-a11y-text="4"] {
+  font-size: 175%; /* 28px base */
+}
+
+/* 2. Alto contraste (>= 7:1) */
+html[data-a11y-contrast="high"] {
+  --color-border: #000000;
+  --focus-ring-width: 4px;
+}
+
+html[data-theme="dark"][data-a11y-contrast="high"],
+html[data-a11y-contrast="high"][data-theme="dark"] {
+  --color-border: #ffffff;
+  --color-text-muted: #e2ede4;
+  --color-surface: #0a110b;
+}
+
+html[data-a11y-contrast="high"] * {
+  border-width: max(1.5px, initial);
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+/* 3. Tipografía accesible (Atkinson Hyperlegible) */
+html[data-a11y-font="legible"] {
+  --font-body: 'Atkinson Hyperlegible', sans-serif !important;
+  --font-heading: 'Atkinson Hyperlegible', sans-serif !important;
+}
+
+/* 4. Espaciado aumentado (WCAG 1.4.12) */
+html[data-a11y-spacing="wide"] {
+  --line-height: 1.85 !important;
+  --letter-spacing: 0.12em !important;
+  --word-spacing: 0.18em !important;
+}
+
+html[data-a11y-spacing="wide"] p,
+html[data-a11y-spacing="wide"] li,
+html[data-a11y-spacing="wide"] a,
+html[data-a11y-spacing="wide"] span,
+html[data-a11y-spacing="wide"] button {
+  line-height: var(--line-height) !important;
+  letter-spacing: var(--letter-spacing) !important;
+  word-spacing: var(--word-spacing) !important;
+}
+
+/* 5. Subrayar todos los enlaces interactivos */
+html[data-a11y-links="underline"] a {
+  text-decoration: underline !important;
+  text-decoration-thickness: 0.125em !important;
+  text-underline-offset: 0.25em !important;
+}
+
+/* 6. Reducción de movimiento */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html[data-a11y-motion="reduce"] *,
+html[data-a11y-motion="reduce"] *::before,
+html[data-a11y-motion="reduce"] *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}

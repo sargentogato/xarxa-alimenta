@@ -1,0 +1,245 @@
+/**
+ * palettes.css: Sistema de 5 Paletas Exclusivas para la Huerta Comunitaria.
+ * 
+ * 1. Huerta Viva (Por defecto - Verde huerta y trigo cálido, 100% intacta)
+ * 2. Sol y Tomate Fuego (Rojo tomate jugoso hipervibrante + Amarillo solar)
+ * 3. ⚡ Cyber Huerto / Flor de Pitahaya (Fucsia buganvilla flúor + Lima ácida)
+ * 4. 🍊 Cítrico Pop & Cyan (Mandarina explosiva + Turquesa mediterráneo)
+ * 5. 🫐 Mora Silvestre & Menta Flúor (Violeta baya silvestre + Menta eléctrica)
+ *
+ * Todas calibradas para magnetismo visual y contraste accesible WCAG AA.
+ */
+
+/* ==========================================================================
+   1. PALETA HUERTA VIVA (Por defecto: 100% INTACTA SEGÚN INSTRUCCIÓN)
+   ========================================================================== */
+
+/* 1a. Huerta Viva - Modo Claro */
+:root,
+[data-palette="blanco-verde"] {
+  --color-primary: #1e7033;         /* Verde huerta vigoroso */
+  --color-primary-strong: #124d22;  /* Verde bosque profundo */
+  --color-primary-soft: #eaf6ec;    /* Rocío vegetal suave */
+  --color-accent: #ea580c;          /* Naranja tomate/albaricoque maduro */
+  --color-accent-soft: #fff3e8;     /* Fondo albaricoque */
+  --color-accent-contrast: #ffffff;
+  --color-sun: #ca8a04;             /* Amarillo sol de campo */
+  --color-sun-soft: #fef9c3;        /* Resplandor suave de sol */
+  
+  /* Fondos estilo Kinder Ground: cálidos, terrosos y orgánicos */
+  --color-bg: #fcf8f2;              /* Lienzo cálido lino / harina de trigo */
+  --color-surface: #ffffff;         /* Tarjetas flotantes limpias */
+  --color-surface-alt: #f3ede2;     /* Bloque arena tostada cálida */
+  --color-surface-tint: #e4efe2;    /* Bloque verde huerto suave */
+  --color-surface-hover: #faebd8;
+  --color-border: #decfae;          /* Borde arcilloso sutil */
+  --color-on-primary: #ffffff;
+  --color-glow: rgba(30, 112, 51, 0.18);
+  --color-accent-glow: rgba(234, 88, 12, 0.28);
+}
+
+/* 1b. Huerta Viva - Modo Oscuro */
+[data-theme="dark"],
+[data-palette="blanco-verde"][data-theme="dark"] {
+  --color-primary: #4ade80;         /* Verde brote esmeralda luminoso */
+  --color-primary-strong: #86efac;  /* Verde menta claro */
+  --color-primary-soft: #062b16;    /* Fondo vegetal nocturno */
+  --color-accent: #fb923c;          /* Ámbar / naranja luminoso */
+  --color-accent-soft: #2e1507;
+  --color-accent-contrast: #150600;
+  --color-sun: #facc15;
+  --color-sun-soft: #2b2306;
+  --color-bg: #121914;              /* Tierra fértil nocturna con calidez */
+  --color-surface: #1a241e;
+  --color-surface-alt: #223027;     /* Bloque nocturno contrastado */
+  --color-surface-tint: #163821;    /* Tinte verde nocturno */
+  --color-surface-hover: #293a2f;
+  --color-border: #2e4736;
+  --color-on-primary: #04180a;
+  --color-glow: rgba(74, 222, 128, 0.22);
+  --color-accent-glow: rgba(251, 146, 60, 0.32);
+}
+
+/* ==========================================================================
+   2. PALETA SOL Y TOMATE FUEGO (Carmesí Jugoso + Amarillo Solar Puro)
+   ========================================================================== */
+
+/* 2a. Sol y Tomate Fuego - Modo Claro */
+[data-palette="amarillo-tomate"] {
+  --color-primary: #e11d48;         /* Rojo Tomate San Marzano fresco y maduro */
+  --color-primary-strong: #9f1239;  /* Rubí profundo de alto contraste */
+  --color-primary-soft: #ffe4e8;    /* Jugo de tomate rosado suave */
+  --color-accent: #d97706;          /* Mostaza solar y azafrán tostado */
+  --color-accent-soft: #fef3c7;     /* Crema de miel dorada */
+  --color-accent-contrast: #ffffff;
+  --color-sun: #eab308;             /* Sol naciente de la huerta */
+  --color-sun-soft: #fef9c3;
+  --color-bg: #fffdf5;              /* Lienzo cálido maíz tierno y sol */
+  --color-surface: #ffffff;
+  --color-surface-alt: #fef3c7;     /* Bloque azafrán luminoso */
+  --color-surface-tint: #ffe4e6;    /* Bloque suave tomate */
+  --color-surface-hover: #fed7aa;
+  --color-border: #fcd34d;          /* Borde solar dorado */
+  --color-on-primary: #ffffff;
+  --color-glow: rgba(225, 29, 72, 0.32);
+  --color-accent-glow: rgba(234, 179, 8, 0.42);
+}
+
+/* 2b. Sol y Tomate Fuego - Modo Oscuro */
+[data-palette="amarillo-tomate"][data-theme="dark"] {
+  --color-primary: #ff2a5f;         /* Rojo Tomate neón electrizante */
+  --color-primary-strong: #ff859d;  /* Frambuesa iluminado */
+  --color-primary-soft: #380a13;
+  --color-accent: #facc15;          /* Amarillo Girasol luminoso */
+  --color-accent-soft: #382c04;
+  --color-accent-contrast: #1c1300;
+  --color-sun: #fde047;             /* Amarillo Sol puro */
+  --color-sun-soft: #423507;
+  --color-bg: #18090d;              /* Noche rubí volcánica */
+  --color-surface: #250f15;         /* Tarjeta noche ciruela */
+  --color-surface-alt: #36141c;     /* Bloque vino especiado */
+  --color-surface-tint: #2b1f06;    /* Bloque ámbar nocturno */
+  --color-surface-hover: #401822;
+  --color-border: #70212e;          /* Borde rubí vibrante */
+  --color-on-primary: #ffffff;
+  --color-glow: rgba(255, 42, 95, 0.45);
+  --color-accent-glow: rgba(250, 204, 21, 0.5);
+}
+
+/* ==========================================================================
+   3. ⚡ PALETA CYBER HUERTO / PITAHAYA NEÓN (Fucsia Eléctrico + Lima Flúor)
+   ========================================================================== */
+
+/* 3a. Cyber Huerto - Modo Claro */
+[data-palette="neon-botanico"] {
+  --color-primary: #e1147a;         /* Fucsia Pitahaya / Flor de buganvilla eléctrico */
+  --color-primary-strong: #9d0c54;
+  --color-primary-soft: #fdf2f8;
+  --color-accent: #65a30d;          /* Verde lima brote clorofila */
+  --color-accent-soft: #ecfccb;
+  --color-accent-contrast: #ffffff;
+  --color-sun: #c026d3;             /* Destello orquídea mágica */
+  --color-sun-soft: #fae8ff;
+  --color-bg: #fdf5fc;              /* Lienzo floral fresco */
+  --color-surface: #ffffff;
+  --color-surface-alt: #fae8ff;     /* Bloque lila / buganvilla suave */
+  --color-surface-tint: #f0fdf4;    /* Bloque lima vegetal */
+  --color-surface-hover: #f5d0fe;
+  --color-border: #f0abfc;
+  --color-on-primary: #ffffff;
+  --color-glow: rgba(225, 20, 122, 0.35);
+  --color-accent-glow: rgba(101, 163, 13, 0.4);
+}
+
+/* 3b. Cyber Huerto - Modo Oscuro */
+[data-palette="neon-botanico"][data-theme="dark"] {
+  --color-primary: #ff3399;         /* Neón Pitahaya deslumbrante */
+  --color-primary-strong: #ff99cc;
+  --color-primary-soft: #380824;
+  --color-accent: #a3e635;          /* Verde lima fluorescente */
+  --color-accent-soft: #192e03;
+  --color-accent-contrast: #071500;
+  --color-sun: #f0abfc;             /* Violeta neón radiante */
+  --color-sun-soft: #380b42;
+  --color-bg: #12051a;              /* Noche berenjena profunda abisal */
+  --color-surface: #1e0a2b;         /* Tarjeta amatista cósmica */
+  --color-surface-alt: #2b0e3d;     /* Bloque morado fiesta */
+  --color-surface-tint: #162606;    /* Bloque lima neón */
+  --color-surface-hover: #3d1454;
+  --color-border: #6b21a8;          /* Borde neón violeta */
+  --color-on-primary: #120317;
+  --color-glow: rgba(255, 51, 153, 0.5);
+  --color-accent-glow: rgba(163, 230, 53, 0.55);
+}
+
+/* ==========================================================================
+   4. 🍊 PALETA CÍTRICO POP & CYAN (Mandarina Explosiva + Azul Mar Balear)
+   ========================================================================== */
+
+/* 4a. Cítrico Pop - Modo Claro */
+[data-palette="citrico-pop"] {
+  --color-primary: #ea580c;         /* Mandarina valenciana jugosa hiperintensa */
+  --color-primary-strong: #9a3412;
+  --color-primary-soft: #fff7ed;
+  --color-accent: #0284c7;          /* Azul turquesa / cyan mediterráneo */
+  --color-accent-soft: #e0f2fe;
+  --color-accent-contrast: #ffffff;
+  --color-sun: #f59e0b;             /* Sol radiante de azahar */
+  --color-sun-soft: #fef3c7;
+  --color-bg: #fff9f2;              /* Lienzo néctar melocotón */
+  --color-surface: #ffffff;
+  --color-surface-alt: #ffedd5;     /* Bloque mandarina suave */
+  --color-surface-tint: #e0f2fe;    /* Bloque mar turquesa */
+  --color-surface-hover: #fed7aa;
+  --color-border: #fdba74;
+  --color-on-primary: #ffffff;
+  --color-glow: rgba(234, 88, 12, 0.35);
+  --color-accent-glow: rgba(2, 132, 199, 0.38);
+}
+
+/* 4b. Cítrico Pop - Modo Oscuro */
+[data-palette="citrico-pop"][data-theme="dark"] {
+  --color-primary: #ff7849;         /* Mandarina llama volcánica */
+  --color-primary-strong: #ffb499;
+  --color-primary-soft: #381203;
+  --color-accent: #38bdf8;          /* Cyan neón / turquesa marino */
+  --color-accent-soft: #062338;
+  --color-accent-contrast: #011420;
+  --color-sun: #fbbf24;
+  --color-sun-soft: #2f2205;
+  --color-bg: #0f1019;              /* Azul añil noche mediterránea */
+  --color-surface: #181928;
+  --color-surface-alt: #22233b;
+  --color-surface-tint: #0c2333;
+  --color-surface-hover: #2d2e4d;
+  --color-border: #3f426b;
+  --color-on-primary: #150600;
+  --color-glow: rgba(255, 120, 73, 0.5);
+  --color-accent-glow: rgba(56, 189, 248, 0.5);
+}
+
+/* ==========================================================================
+   5. 🫐 PALETA MORA SILVESTRE & MENTA (Violeta Baya Silvestre + Menta Eléctrica)
+   ========================================================================== */
+
+/* 5a. Mora Silvestre & Menta - Modo Claro */
+[data-palette="azul-naranja"] {
+  --color-primary: #7c3aed;         /* Violeta mora silvestre profundo y magnético */
+  --color-primary-strong: #5b21b6;
+  --color-primary-soft: #f5f3ff;
+  --color-accent: #059669;          /* Verde menta fresca de huerto */
+  --color-accent-soft: #ecfdf5;
+  --color-accent-contrast: #ffffff;
+  --color-sun: #eab308;             /* Chispa dorada de polen */
+  --color-sun-soft: #fef9c3;
+  --color-bg: #fbfaff;              /* Lienzo brisa de lavanda */
+  --color-surface: #ffffff;
+  --color-surface-alt: #ede9fe;     /* Bloque mora crema */
+  --color-surface-tint: #d1fae5;    /* Bloque menta vegetal */
+  --color-surface-hover: #ddd6fe;
+  --color-border: #c4b5fd;
+  --color-on-primary: #ffffff;
+  --color-glow: rgba(124, 58, 237, 0.32);
+  --color-accent-glow: rgba(5, 150, 105, 0.38);
+}
+
+/* 5b. Mora Silvestre & Menta - Modo Oscuro */
+[data-palette="azul-naranja"][data-theme="dark"] {
+  --color-primary: #a78bfa;         /* Violeta orquídea neón luminoso */
+  --color-primary-strong: #c4b5fd;
+  --color-primary-soft: #231047;
+  --color-accent: #34d399;          /* Menta fosforescente de altísimo contraste */
+  --color-accent-soft: #052e1f;
+  --color-accent-contrast: #01140c;
+  --color-sun: #facc15;
+  --color-sun-soft: #2b2306;
+  --color-bg: #0d0a17;              /* Noche mora cósmica */
+  --color-surface: #171226;
+  --color-surface-alt: #231b3b;
+  --color-surface-tint: #09261a;
+  --color-surface-hover: #2e234e;
+  --color-border: #43336e;
+  --color-on-primary: #100524;
+  --color-glow: rgba(167, 139, 250, 0.45);
+  --color-accent-glow: rgba(52, 211, 153, 0.5);
+}

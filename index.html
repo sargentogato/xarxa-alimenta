@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xarxa Alimenta</title>
+    <meta
+      name="description"
+      content="Red comunitaria de huertos, alimentación local, talleres y jardín forestal en Xarxa Alimenta. Cultivando soberanía alimentaria y comunidad."
+    />
+    <meta property="og:title" content="Xarxa Alimenta" />
+    <meta
+      property="og:description"
+      content="Red comunitaria de huertos, alimentación local, talleres y jardín forestal en Xarxa Alimenta."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Script inline anti-parpadeo: aplica tema, paleta y accesibilidad antes del primer render -->
+    <script>
+      (function () {
+        try {
+          var root = document.documentElement;
+
+          // 1. Tema (auto, light, dark)
+          var savedTheme = localStorage.getItem('theme') || 'auto';
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var effectiveTheme = savedTheme === 'auto' ? (prefersDark ? 'dark' : 'light') : savedTheme;
+          root.setAttribute('data-theme', effectiveTheme);
+
+          // 2. Paleta cerrada
+          var savedPalette = localStorage.getItem('palette') || 'blanco-verde';
+          root.setAttribute('data-palette', savedPalette);
+
+          // 3. Ajustes de accesibilidad
+          var a11yRaw = localStorage.getItem('a11y');
+          if (a11yRaw) {
+            var a11y = JSON.parse(a11yRaw);
+            if (a11y.textSizeStep) root.setAttribute('data-a11y-text', String(a11y.textSizeStep));
+            if (a11y.highContrast) root.setAttribute('data-a11y-contrast', 'high');
+            if (a11y.legibleFont) root.setAttribute('data-a11y-font', 'legible');
+            if (a11y.wideSpacing) root.setAttribute('data-a11y-spacing', 'wide');
+            if (a11y.underlineLinks) root.setAttribute('data-a11y-links', 'underline');
+            if (a11y.reduceMotion) root.setAttribute('data-a11y-motion', 'reduce');
+          } else {
+            // Si el sistema prefiere movimiento reducido
+            if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+              root.setAttribute('data-a11y-motion', 'reduce');
+            }
+          }
+
+          // 4. Idioma sincronizado
+          var savedLocale = localStorage.getItem('locale');
+          if (savedLocale) {
+            root.setAttribute('lang', savedLocale);
+          }
+        } catch (e) {
+          // Ignorar excepciones si localStorage está deshabilitado
+        }
+      })();
+    </script>
+
+    <!-- Datos estructurados JSON-LD Schema.org para Organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "NGO",
+        "name": "Xarxa Alimenta",
+        "alternateName": "Alimenta",
+        "description": "Red comunitaria de huertos, alimentación local, talleres y jardín forestal.",
+        "url": "https://xarxaalimenta.org",
+        "email": "hola@xarxaalimenta.org",
+        "telephone": "+34600000000",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jardín Forestal Comunitario s/n",
+          "addressLocality": "Valencia",
+          "postalCode": "46000",
+          "addressCountry": "ES"
+        },
+        "sameAs": [
+          "https://www.instagram.com/xarxa.alimenta/"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

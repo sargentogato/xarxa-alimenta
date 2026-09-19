@@ -1,0 +1,18 @@
+export default {
+  languageName: 'English',
+  skipToContent: 'Skip to main content',
+  loading: 'Loading...',
+  error: 'An error occurred',
+  close: 'Close',
+  open: 'Open',
+  backToHome: 'Back to home',
+  externalLinkNotice: '(opens in a new tab)',
+  contactUs: 'Contact us',
+  learnMore: 'Learn more',
+  copySuccess: 'Copied!',
+  copyAction: 'Copy',
+  openModal: 'View details',
+  closeModal: 'Close popup dialog',
+  pageNotFoundTitle: 'Page not found',
+  pageNotFoundText: 'Sorry, the page you are looking for does not exist or has been moved.',
+};

@@ -1,0 +1,30 @@
+{
+  "name": "xarxa-alimenta",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port=3000 --host=0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview",
+    "type-check": "vue-tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@fontsource-variable/fraunces": "^5.2.5",
+    "@fontsource-variable/nunito": "^5.2.5",
+    "@fontsource/atkinson-hyperlegible": "^5.2.5",
+    "vue": "^3.5.13",
+    "vue-i18n": "^11.1.1",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "typescript": "^5.7.3",
+    "vite": "^6.2.0",
+    "vite-imagetools": "^12.0.1",
+    "vitest": "^3.0.7",
+    "vue-tsc": "^2.2.8"
+  }
+}

@@ -1,0 +1,18 @@
+export default {
+  languageName: 'Español',
+  skipToContent: 'Saltar al contenido principal',
+  loading: 'Cargando...',
+  error: 'Ha ocurrido un error',
+  close: 'Cerrar',
+  open: 'Abrir',
+  backToHome: 'Volver al inicio',
+  externalLinkNotice: '(abre en pestaña nueva)',
+  contactUs: 'Contáctanos',
+  learnMore: 'Saber más',
+  copySuccess: '¡Copiado!',
+  copyAction: 'Copiar',
+  openModal: 'Ver detalle',
+  closeModal: 'Cerrar ventana emergente',
+  pageNotFoundTitle: 'Página no encontrada',
+  pageNotFoundText: 'Lo sentimos, la página que buscas no existe o ha sido movida.',
+};
