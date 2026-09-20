@@ -6,18 +6,18 @@
  * Clases públicas: .a11y-panel, .a11y-panel__trigger, .a11y-panel__dialog, .a11y-panel__header, .a11y-panel__title, .a11y-panel__section, .a11y-panel__control, .a11y-panel__swatch
  * Expone: root, isOpen, open, close, toggle
  */
-import { ref, watch, nextTick, onMounted, onBeforeUnmount } from 'vue';
-import { useI18n } from 'vue-i18n';
-import { useAccessibility } from '@/composables/useAccessibility.ts';
-import { useAppearance } from '@/composables/useAppearance.ts';
-import { paletteList } from '@/data/config.ts';
-import IconAccessibility from './icons/IconAccessibility.vue';
-import IconClose from './icons/IconClose.vue';
-import IconSun from './icons/IconSun.vue';
-import IconMoon from './icons/IconMoon.vue';
-import IconAuto from './icons/IconAuto.vue';
-import IconReset from './icons/IconReset.vue';
-import IconCheck from './icons/IconCheck.vue';
+import { ref, watch, nextTick, onMounted, onBeforeUnmount } from "vue";
+import { useI18n } from "vue-i18n";
+import { useAccessibility } from "@/composables/useAccessibility.ts";
+import { useAppearance } from "@/composables/useAppearance.ts";
+import { paletteList } from "@/data/config.ts";
+import IconAccessibility from "./icons/IconAccessibility.vue";
+import IconClose from "./icons/IconClose.vue";
+import IconSun from "./icons/IconSun.vue";
+import IconMoon from "./icons/IconMoon.vue";
+import IconAuto from "./icons/IconAuto.vue";
+import IconReset from "./icons/IconReset.vue";
+import IconCheck from "./icons/IconCheck.vue";
 
 const { t } = useI18n();
 const {
@@ -32,13 +32,8 @@ const {
   resetToDefaults: resetA11y,
 } = useAccessibility();
 
-const {
-  theme,
-  palette,
-  showPaletteSelector,
-  setTheme,
-  setPalette,
-} = useAppearance();
+const { theme, palette, showPaletteSelector, setTheme, setPalette } =
+  useAppearance();
 
 const root = ref<HTMLElement | null>(null);
 const triggerRef = ref<HTMLButtonElement | null>(null);
@@ -60,23 +55,23 @@ function close() {
 
 function resetAll() {
   resetA11y();
-  setTheme('auto');
-  setPalette('blanco-verde');
+  setTheme("auto");
+  setPalette("blanco-verde");
 }
 
 // Trap focus inside dialog when open
 function handleKeydown(e: KeyboardEvent) {
   if (!isOpen.value) return;
 
-  if (e.key === 'Escape') {
+  if (e.key === "Escape") {
     e.preventDefault();
     close();
     return;
   }
 
-  if (e.key === 'Tab' && dialogRef.value) {
+  if (e.key === "Tab" && dialogRef.value) {
     const focusable = dialogRef.value.querySelectorAll<HTMLElement>(
-      'button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      'button:not([disabled]), [tabindex]:not([tabindex="-1"])',
     );
     if (!focusable.length) return;
 
@@ -98,11 +93,7 @@ function handleKeydown(e: KeyboardEvent) {
 }
 
 function handleDocumentClick(e: MouseEvent) {
-  if (
-    isOpen.value &&
-    root.value &&
-    !root.value.contains(e.target as Node)
-  ) {
+  if (isOpen.value && root.value && !root.value.contains(e.target as Node)) {
     close();
   }
 }
@@ -122,13 +113,13 @@ watch(isOpen, (opened) => {
 });
 
 onMounted(() => {
-  document.addEventListener('keydown', handleKeydown);
-  document.addEventListener('click', handleDocumentClick);
+  document.addEventListener("keydown", handleKeydown);
+  document.addEventListener("click", handleDocumentClick);
 });
 
 onBeforeUnmount(() => {
-  document.removeEventListener('keydown', handleKeydown);
-  document.removeEventListener('click', handleDocumentClick);
+  document.removeEventListener("keydown", handleKeydown);
+  document.removeEventListener("click", handleDocumentClick);
 });
 
 defineExpose({
@@ -153,7 +144,9 @@ defineExpose({
       @click="toggle"
     >
       <IconAccessibility size="1.35rem" />
-      <span class="a11y-panel__trigger-text">{{ t('accessibility.buttonLabel') }}</span>
+      <span class="a11y-panel__trigger-text">{{
+        t("accessibility.buttonLabel")
+      }}</span>
     </button>
 
     <!-- Diálogo accesible / Popover en escritorio / Bottom sheet en móvil -->
@@ -170,7 +163,7 @@ defineExpose({
         <div class="a11y-panel__header-title">
           <IconAccessibility size="1.25rem" />
           <h2 id="a11y-title" class="a11y-panel__title">
-            {{ t('accessibility.panelTitle') }}
+            {{ t("accessibility.panelTitle") }}
           </h2>
         </div>
         <button
@@ -188,7 +181,7 @@ defineExpose({
         <!-- 1. Tamaño del texto -->
         <section class="a11y-panel__section">
           <h3 class="a11y-panel__section-title">
-            {{ t('accessibility.textSize.title') }}
+            {{ t("accessibility.textSize.title") }}
           </h3>
           <div class="a11y-panel__text-size-controls">
             <button
@@ -222,38 +215,51 @@ defineExpose({
         <!-- 2. Tema visual -->
         <section class="a11y-panel__section">
           <h3 class="a11y-panel__section-title">
-            {{ t('accessibility.theme.title') }}
+            {{ t("accessibility.theme.title") }}
           </h3>
-          <div class="a11y-panel__segmented-control" role="radiogroup" :aria-label="t('accessibility.theme.title')">
+          <div
+            class="a11y-panel__segmented-control"
+            role="radiogroup"
+            :aria-label="t('accessibility.theme.title')"
+          >
             <button
               type="button"
               role="radio"
               :aria-checked="theme === 'auto'"
-              :class="['a11y-panel__segment', theme === 'auto' ? 'a11y-panel__segment--active' : '']"
+              :class="[
+                'a11y-panel__segment',
+                theme === 'auto' ? 'a11y-panel__segment--active' : '',
+              ]"
               @click="setTheme('auto')"
             >
               <IconAuto size="1rem" />
-              <span>{{ t('accessibility.theme.auto') }}</span>
+              <span>{{ t("accessibility.theme.auto") }}</span>
             </button>
             <button
               type="button"
               role="radio"
               :aria-checked="theme === 'light'"
-              :class="['a11y-panel__segment', theme === 'light' ? 'a11y-panel__segment--active' : '']"
+              :class="[
+                'a11y-panel__segment',
+                theme === 'light' ? 'a11y-panel__segment--active' : '',
+              ]"
               @click="setTheme('light')"
             >
               <IconSun size="1rem" />
-              <span>{{ t('accessibility.theme.light') }}</span>
+              <span>{{ t("accessibility.theme.light") }}</span>
             </button>
             <button
               type="button"
               role="radio"
               :aria-checked="theme === 'dark'"
-              :class="['a11y-panel__segment', theme === 'dark' ? 'a11y-panel__segment--active' : '']"
+              :class="[
+                'a11y-panel__segment',
+                theme === 'dark' ? 'a11y-panel__segment--active' : '',
+              ]"
               @click="setTheme('dark')"
             >
               <IconMoon size="1rem" />
-              <span>{{ t('accessibility.theme.dark') }}</span>
+              <span>{{ t("accessibility.theme.dark") }}</span>
             </button>
           </div>
         </section>
@@ -261,26 +267,51 @@ defineExpose({
         <!-- 3. Paleta de color cerrada (si está habilitada en config) -->
         <section v-if="showPaletteSelector" class="a11y-panel__section">
           <h3 class="a11y-panel__section-title">
-            {{ t('accessibility.palette.title') }}
+            {{ t("accessibility.palette.title") }}
           </h3>
-          <div class="a11y-panel__palettes" role="radiogroup" :aria-label="t('accessibility.palette.title')">
+          <div
+            class="a11y-panel__palettes"
+            role="radiogroup"
+            :aria-label="t('accessibility.palette.title')"
+          >
             <button
               v-for="p in paletteList"
               :key="p.id"
               type="button"
               role="radio"
               :aria-checked="palette === p.id"
-              :class="['a11y-panel__palette-card', palette === p.id ? 'a11y-panel__palette-card--selected' : '']"
+              :class="[
+                'a11y-panel__palette-card',
+                palette === p.id ? 'a11y-panel__palette-card--selected' : '',
+              ]"
               @click="setPalette(p.id)"
             >
               <div class="a11y-panel__palette-swatches">
-                <span class="a11y-panel__swatch" :style="{ backgroundColor: p.preview.primary }" />
-                <span class="a11y-panel__swatch" :style="{ backgroundColor: p.preview.accent }" />
-                <span class="a11y-panel__swatch" :style="{ backgroundColor: p.preview.bg, border: '1px solid #ccc' }" />
+                <span
+                  class="a11y-panel__swatch"
+                  :style="{ backgroundColor: p.preview.primary }"
+                />
+                <span
+                  class="a11y-panel__swatch"
+                  :style="{ backgroundColor: p.preview.accent }"
+                />
+                <span
+                  class="a11y-panel__swatch"
+                  :style="{
+                    backgroundColor: p.preview.bg,
+                    border: '1px solid #ccc',
+                  }"
+                />
               </div>
               <span class="a11y-panel__palette-name">{{ t(p.nameKey) }}</span>
-              <span v-if="p.badge" class="a11y-panel__palette-badge">{{ p.badge }}</span>
-              <IconCheck v-if="palette === p.id" size="1rem" class="a11y-panel__palette-check" />
+              <span v-if="p.badge" class="a11y-panel__palette-badge">{{
+                p.badge
+              }}</span>
+              <IconCheck
+                v-if="palette === p.id"
+                size="1rem"
+                class="a11y-panel__palette-check"
+              />
             </button>
           </div>
         </section>
@@ -292,12 +323,15 @@ defineExpose({
             type="button"
             role="switch"
             :aria-checked="settings.highContrast"
-            :class="['a11y-panel__toggle', settings.highContrast ? 'a11y-panel__toggle--on' : '']"
+            :class="[
+              'a11y-panel__toggle',
+              settings.highContrast ? 'a11y-panel__toggle--on' : '',
+            ]"
             @click="toggleHighContrast"
           >
             <div class="a11y-panel__toggle-label">
-              <strong>{{ t('accessibility.contrast.title') }}</strong>
-              <small>{{ t('accessibility.contrast.description') }}</small>
+              <strong>{{ t("accessibility.contrast.title") }}</strong>
+              <small>{{ t("accessibility.contrast.description") }}</small>
             </div>
             <span class="a11y-panel__switch" aria-hidden="true" />
           </button>
@@ -307,12 +341,15 @@ defineExpose({
             type="button"
             role="switch"
             :aria-checked="settings.legibleFont"
-            :class="['a11y-panel__toggle', settings.legibleFont ? 'a11y-panel__toggle--on' : '']"
+            :class="[
+              'a11y-panel__toggle',
+              settings.legibleFont ? 'a11y-panel__toggle--on' : '',
+            ]"
             @click="toggleLegibleFont"
           >
             <div class="a11y-panel__toggle-label">
-              <strong>{{ t('accessibility.font.title') }}</strong>
-              <small>{{ t('accessibility.font.description') }}</small>
+              <strong>{{ t("accessibility.font.title") }}</strong>
+              <small>{{ t("accessibility.font.description") }}</small>
             </div>
             <span class="a11y-panel__switch" aria-hidden="true" />
           </button>
@@ -322,12 +359,15 @@ defineExpose({
             type="button"
             role="switch"
             :aria-checked="settings.wideSpacing"
-            :class="['a11y-panel__toggle', settings.wideSpacing ? 'a11y-panel__toggle--on' : '']"
+            :class="[
+              'a11y-panel__toggle',
+              settings.wideSpacing ? 'a11y-panel__toggle--on' : '',
+            ]"
             @click="toggleWideSpacing"
           >
             <div class="a11y-panel__toggle-label">
-              <strong>{{ t('accessibility.spacing.title') }}</strong>
-              <small>{{ t('accessibility.spacing.description') }}</small>
+              <strong>{{ t("accessibility.spacing.title") }}</strong>
+              <small>{{ t("accessibility.spacing.description") }}</small>
             </div>
             <span class="a11y-panel__switch" aria-hidden="true" />
           </button>
@@ -337,12 +377,15 @@ defineExpose({
             type="button"
             role="switch"
             :aria-checked="settings.underlineLinks"
-            :class="['a11y-panel__toggle', settings.underlineLinks ? 'a11y-panel__toggle--on' : '']"
+            :class="[
+              'a11y-panel__toggle',
+              settings.underlineLinks ? 'a11y-panel__toggle--on' : '',
+            ]"
             @click="toggleUnderlineLinks"
           >
             <div class="a11y-panel__toggle-label">
-              <strong>{{ t('accessibility.links.title') }}</strong>
-              <small>{{ t('accessibility.links.description') }}</small>
+              <strong>{{ t("accessibility.links.title") }}</strong>
+              <small>{{ t("accessibility.links.description") }}</small>
             </div>
             <span class="a11y-panel__switch" aria-hidden="true" />
           </button>
@@ -352,12 +395,15 @@ defineExpose({
             type="button"
             role="switch"
             :aria-checked="settings.reduceMotion"
-            :class="['a11y-panel__toggle', settings.reduceMotion ? 'a11y-panel__toggle--on' : '']"
+            :class="[
+              'a11y-panel__toggle',
+              settings.reduceMotion ? 'a11y-panel__toggle--on' : '',
+            ]"
             @click="toggleReduceMotion"
           >
             <div class="a11y-panel__toggle-label">
-              <strong>{{ t('accessibility.motion.title') }}</strong>
-              <small>{{ t('accessibility.motion.description') }}</small>
+              <strong>{{ t("accessibility.motion.title") }}</strong>
+              <small>{{ t("accessibility.motion.description") }}</small>
             </div>
             <span class="a11y-panel__switch" aria-hidden="true" />
           </button>
@@ -365,13 +411,9 @@ defineExpose({
 
         <!-- 9. Botón Restablecer -->
         <div class="a11y-panel__footer">
-          <button
-            type="button"
-            class="a11y-panel__reset-btn"
-            @click="resetAll"
-          >
+          <button type="button" class="a11y-panel__reset-btn" @click="resetAll">
             <IconReset size="1.1rem" />
-            <span>{{ t('accessibility.reset') }}</span>
+            <span>{{ t("accessibility.reset") }}</span>
           </button>
         </div>
       </div>
@@ -398,14 +440,16 @@ defineExpose({
   font-weight: 700;
   font-size: 0.9375rem;
   cursor: pointer;
-  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
 }
 
 .a11y-panel__trigger:hover {
   background-color: var(--color-surface-hover);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1200px) {
   .a11y-panel__trigger-text {
     display: none;
   }
@@ -420,7 +464,7 @@ defineExpose({
   position: absolute;
   top: calc(100% + var(--space-2));
   right: 0;
-  z-index: 100;
+  z-index: 2;
   width: var(--_w);
   max-width: 90vw;
   max-height: 82vh;
@@ -434,7 +478,7 @@ defineExpose({
   overflow: hidden;
 }
 
-@media (max-width: 640px) {
+/* @media (max-width: 640px) {
   .a11y-panel__dialog {
     position: fixed;
     top: auto;
@@ -448,7 +492,7 @@ defineExpose({
     border-inline: none;
     border-block-end: none;
   }
-}
+} */
 
 .a11y-panel__header {
   display: flex;
@@ -481,7 +525,9 @@ defineExpose({
   margin: calc(-1 * var(--space-1));
   color: var(--color-text-muted);
   border-radius: var(--radius-md);
-  transition: color var(--transition-fast), background-color var(--transition-fast);
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast);
 }
 
 .a11y-panel__close:hover {
@@ -568,7 +614,9 @@ defineExpose({
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--color-text);
-  transition: background-color var(--transition-fast), color var(--transition-fast);
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
 }
 
 .a11y-panel__segment--active {
@@ -596,7 +644,9 @@ defineExpose({
   border-radius: var(--radius-md);
   color: var(--color-text);
   cursor: pointer;
-  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    background-color var(--transition-fast);
 }
 
 .a11y-panel__palette-card:hover {
@@ -702,7 +752,7 @@ defineExpose({
 }
 
 .a11y-panel__switch::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0.1875rem;
   left: 0.1875rem;
@@ -742,7 +792,10 @@ defineExpose({
   border-radius: var(--radius-md);
   font-weight: 700;
   font-size: 0.9375rem;
-  transition: color var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    background-color var(--transition-fast);
 }
 
 .a11y-panel__reset-btn:hover {
