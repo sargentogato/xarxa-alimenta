@@ -476,23 +476,14 @@ defineExpose({
   box-shadow: var(--shadow-xl);
   outline: none;
   overflow: hidden;
+  transform: translateX(10%);
 }
 
-/* @media (max-width: 640px) {
+@media (min-width: 640px) {
   .a11y-panel__dialog {
-    position: fixed;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    max-width: 100%;
-    max-height: 85vh;
-    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
-    border-inline: none;
-    border-block-end: none;
+    transform: none;
   }
-} */
+}
 
 .a11y-panel__header {
   display: flex;
